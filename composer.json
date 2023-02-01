@@ -1,16 +1,21 @@
 {
-  "name": "elasticsearch/elasticsearch",
-  "description": "PHP Client for Elasticsearch",
+  "name": "sawdays/elasticsearch",
+  "description": "PHP Client for Elasticsearch with updated support for PHP 8.0",
   "keywords": ["search","client", "elasticsearch"],
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Zachary Tong"
+      "name": "Zachary Tong",
+      "role": "Original developer"
+    },
+    {
+      "name": "Matt Stone",
+      "role": "PHP 8.0 compatibility developer"
     }
   ],
   "require": {
-    "php": "^5.6|^7.0",
+    "php": "^7.4|^8.0",
     "psr/log": "~1.0",
     "guzzlehttp/ringphp" : "~1.0"
   },
@@ -21,7 +26,12 @@
     "symfony/finder": "^2.8",
     "cpliakas/git-wrapper": "~1.0",
     "sami/sami": "~3.2",
-    "doctrine/inflector": "^1.1"
+    "doctrine/inflector": "^1.1",
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpcompatibility/php-compatibility": "^9.3"
+  },
+  "scripts": {
+    "sniffer:php8": "phpcs -p ./src --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.0-"
   },
   "suggest": {
     "ext-curl": "*",

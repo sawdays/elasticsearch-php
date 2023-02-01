@@ -1,3 +1,6 @@
+## Release 5.6.0
+- 
+
 ## Release 5.5.0
 
 - Added `User-Agent` header equal to  `elasticsearch-php/5.5.0 (metadata-values)` [[26da9a33]](https://github.com/elastic/elasticsearch-php/commit/26da9a33)
